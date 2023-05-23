@@ -1,0 +1,122 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-size: 16px;
+  color: #d9f743;
+  background: #1c1c1c;
+}
+
+@font-face {
+  font-family: "Tofes";
+  src: url('../tofes-font-1684826160-0/tofes-517oz.ttf');
+  /* src: url('neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayLight.ttf')  */
+}
+
+h1{
+  font-family: 'Tofes', 'Helvetica';
+  font-size: 6rem;
+  font-weight: 100;
+  text-align: center;
+  margin: 5rem 0 0;
+  padding: 0;
+}
+
+h3{
+  margin: 0;
+  padding: 0  ;
+}
+
+img{
+  max-width: 200px;
+  margin: 2.5rem .75rem 0 .75rem;
+  border-radius: 15px;
+}
+
+.list{
+  display: flex;
+}
+
+.wrapper{
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1100px;
+  scroll-behavior: smooth;
+  justify-content: center;
+  /* align-self: center; */
+  /* border: 2px solid red; */
+}
+
+.row{
+  display: flex;
+}
+
+.hero{
+  height: 100vh;  
+  /* border: 2px solid red; */
+}
+
+form{
+  display: flex;
+  justify-content: center;
+  margin: 5rem 0 5rem;
+  gap: 1rem;
+  /* border: 2px solid red; */
+}
+
+input{
+  border: 1px solid #d9f743;
+  border-radius: 100px;
+  background: #d9f743;
+  outline: none;
+  color: #1c1c1c;
+}
+
+button{
+  background: none;
+  border: 1px solid #d9f743;
+  border-radius: 200px;
+  color: #d9f743;
+  cursor: pointer;
+}
+
+section{
+  width: 100%;
+  overflow-x: hidden;
+  border: 5px solid #d9f743;
+  border-radius: 200px;
+  height: 300px; 
+}
+
+.delete > *{
+  transition: transform 1s ease-in-out;
+}
+
+/* ------------media queries-------------- */
+
+
+@media (max-width: 401px) {
+  form{
+    font-size: .8rem;
+  } 
+}
