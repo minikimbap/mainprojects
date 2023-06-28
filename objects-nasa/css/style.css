@@ -1,0 +1,80 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+body{
+  font-family: Helvetica, sans-serif;
+  font-size: .75rem;
+  color: #03884e;
+  background-color: rgb(202, 231, 159);
+}
+
+.hero{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper{
+  display: flex;
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.row{
+  margin: 0 auto;
+  border: 2px solid #212121;
+  box-shadow: 7px 7px rgba(33, 33, 33, .75);
+  border-radius: 15px;
+  background-color: rgb(223, 248, 184);
+  padding: 1rem;
+  max-width: 500px;
+}
+
+.row *{
+  width: fit-content;
+}
+
+.row h3{
+  font-size: .75rem;
+}
+
+.media img, .media iframe{
+  width: 100%;
+}
+
+button, input{
+  background-color: #03884e;
+  border-radius: 5px;
+  color: #fff;
+  border: 2px solid #03884e;
+}
+
+input{
+  background-color: transparent;
+  color: #03884e;
+  transition: all linear .3s;
+}
+
+button{
+  cursor: pointer;
+  transition: all linear .3s;
+}
+
+button:hover, input:hover, input:focus{
+  background-color: rgb(192, 251, 76);
+  border: 2px solid #212121;
+  color: #212121;
+}
+
