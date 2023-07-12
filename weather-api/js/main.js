@@ -7,8 +7,8 @@ let tableName = document.querySelectorAll('.table__name')
 
 function getFetch(click){
   const choice = document.querySelector('input').value
-  console.log(choice)
-  const keyUrl = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=8MkIhsqRtTxiPLLKo3os35GA9j9ZEGdR&q=${choice}`
+  // console.log(choice)
+  const keyUrl = `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=8MkIhsqRtTxiPLLKo3os35GA9j9ZEGdR&q=${choice}`
   
 
   fetch(keyUrl)
@@ -23,10 +23,10 @@ function getFetch(click){
         fetch(forecastUrl)
             .then(res => res.json()) // parse response as JSON
             .then(data => {
-              console.log(data)                   
+              // console.log(data)                   
 
               let arr = data.DailyForecasts
-              console.log(arr)
+              // console.log(arr)
               let headlines = data.Headline.Text
               document.querySelector('h3').textContent = '(' + headlines +')'
 
@@ -35,26 +35,26 @@ function getFetch(click){
                 
               // }
 
-              fetch("https://gtfo-cors--timmy_i_chen.repl.co/get?url=https://wallhaven.cc/api/v1/search?q=thunderstorm")
-              .then(res => res.json())
-              .then(data => {
+              // fetch("https://gtfo-cors--timmy_i_chen.repl.co/get?url=https://wallhaven.cc/api/v1/search?q=thunderstorm")
+              // .then(res => res.json())
+              // .then(data => {
                 
-                console.log(data.data[1].path)
+              //   console.log(data.data[1].path)
                 
-                if(headlines.includes('thunder')||headlines.includes('Thunder')){
-                  document.querySelector('img').src = data.data[4].path
-                  document.querySelector('img').classList.add('fade')
-                }
-                else{
-                  document.querySelector('img').src = data.data[16].path
-                  document.querySelector('img').classList.add('fade')
-                }
+              //   if(headlines.includes('thunder')||headlines.includes('Thunder')){
+              //     document.querySelector('img').src = data.data[4].path
+              //     document.querySelector('img').classList.add('fade')
+              //   }
+              //   else{
+              //     document.querySelector('img').src = data.data[16].path
+              //     document.querySelector('img').classList.add('fade')
+              //   }
                 
                 
-              })
-              .catch(err => console.log(`Error is ${err}`))
+              // })
+              // .catch(err => console.log(`Error is ${err}`))
 
-              document.querySelector('img').classList.remove('fade')
+              // document.querySelector('img').classList.remove('fade')
 
 
               // Array.from(tableName).forEach(e => e.style.borderBottom = '1px solid white')
