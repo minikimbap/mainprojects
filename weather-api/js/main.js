@@ -8,7 +8,7 @@ let tableName = document.querySelectorAll('.table__name')
 function getFetch(click){
   const choice = document.querySelector('input').value
   console.log(choice)
-  const keyUrl = `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=8MkIhsqRtTxiPLLKo3os35GA9j9ZEGdR&q=${choice}`
+  const keyUrl = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=8MkIhsqRtTxiPLLKo3os35GA9j9ZEGdR&q=${choice}`
   
 
   fetch(keyUrl)
