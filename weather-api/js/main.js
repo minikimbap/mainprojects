@@ -17,7 +17,7 @@ function getFetch(click){
 
         // console.log(data)
         let locationKey = data[0].Key
-        const forecastUrl = `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=W3pVxg8UN1IeGeg6ebn0hHDaoFbiSuyB&details=false`
+        const forecastUrl = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=W3pVxg8UN1IeGeg6ebn0hHDaoFbiSuyB&details=false`
         
         
         fetch(forecastUrl)
