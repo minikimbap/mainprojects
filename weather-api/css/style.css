@@ -1,0 +1,76 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img{
+  display: block;
+  margin: 0 auto;
+  max-width: 200vh;
+  /* height: 200vh; */
+  filter: blur(5px);
+  transition: opacity 3s ease-in-out;
+  opacity: 0;
+  position: absolute; 
+  z-index: -2;
+}
+
+.fade{
+  opacity: 1;
+}
+
+body{
+  background: #000;
+  color: #fff;
+  font-family:monospace;
+}
+
+.row{
+  display: flex;
+}
+
+.hero{
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper{
+  width: 33%;
+  max-width: 1200px;
+  /* background: hsl(217, 19%, 24%); */
+  border-radius: .5rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: space-between;
+}
+
+h1{
+  font-size: 1rem;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+@media(max-width: 500px) {
+  .wrapper{
+    width: 80%;
+  }
+}

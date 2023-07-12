@@ -1,0 +1,96 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  color-scheme: light dark;
+  background: hsl(218, 23%, 16%);
+  font-size: 28px;
+  font-family: 'Manrope';
+}
+
+.row{
+  display: flex;
+}
+
+.hero{
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper{
+  width: 33%;
+  max-width: 1200px;
+  background: hsl(217, 19%, 24%);
+  border-radius: .5rem;
+  /* border: 2px solid red; */
+  padding: 2rem;
+  position: relative;
+}
+
+h2{
+  margin: 0;
+  font-size: .5rem;
+  font-weight: 400;
+  letter-spacing: .25rem;
+  text-align: center;
+  color: hsl(150, 100%, 66%);
+}
+
+p{
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 0;
+  font-weight: 800;
+}
+
+
+img{
+  width: 100%;
+}
+
+
+button{
+  background: hsl(150, 100%, 66%);
+  width: fit-content;
+  padding: 0;
+  padding: .75rem .5rem;
+  border-radius: 100px;
+  margin: 0;
+  border: none;
+  position: absolute;
+  bottom: -1.25rem;
+  right: 46%;
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+button:hover{
+  box-shadow: 0 0 10px hsl(150, 100%, 66%), 0 0 40px hsl(150, 100%, 66%), 0 0 80px hsl(150, 100%, 66%);
+}
+
+.dice{
+  width: 60%;
+  margin: 0 auto;
+}
+
+
+
+/* ======================================================================= */
+
+@media (max-width: 500px){
+  .wrapper{
+    width: 90%;
+  }
+
+  button{
+    transform: translateX(.5rem);
+  }
+}
